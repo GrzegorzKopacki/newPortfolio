@@ -1,9 +1,13 @@
 import styles from "./Navbar.module.css";
+import { useState } from "react";
+import { getImageUrl } from "../../utils";
 
 export function Navbar() {
 	return (
 		<nav className={styles.navbar}>
-			<a href="/" className={styles.title}>Portfolio</a>
+			<a href="/" className={styles.title}>
+				Portfolio
+			</a>
 			<div className={styles.menu}>
 				<ul className={styles.menuItems}>
 					<li>
