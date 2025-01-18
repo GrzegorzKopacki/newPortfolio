@@ -1,13 +1,14 @@
 import styles from "./Navbar.module.css";
 import { useState } from "react";
-import { getImageUrl } from "../../utils";
+import BURGER from "../../../assets/nav/menuIcon.png"
+import X from "../../../assets/nav/closeIcon.png"
 
-export function Navbar() {
+export const Navbar = () => {
 	const [menuOpen, setMenuOpen] = useState(false);
 
 	return (
 		<nav className={styles.navbar}>
-			<a href="/" className={styles.title}>
+			<a className={styles.title} href="/">
 				Portfolio
 			</a>
 			<div className={styles.menu}>
@@ -15,13 +16,16 @@ export function Navbar() {
 					className={styles.menuBtn}
 					src={
 						menuOpen
-							? getImageUrl("nav/closeIcon.png")
-							: getImageUrl("nav/menuIcon.png")
+							? X
+							: BURGER
 					}
 					alt="menu-button"
 					onClick={() => setMenuOpen(!menuOpen)}
 				/>
-				<ul className={`${styles.menuItems} ${menuOpen && styles.menuOpen}`}>
+				<ul
+					className={`${styles.menuItems} ${menuOpen && styles.menuOpen}`}
+					onClick={() => setMenuOpen(false)}
+				>
 					<li>
 						<a href="#about">About</a>
 					</li>
@@ -38,4 +42,4 @@ export function Navbar() {
 			</div>
 		</nav>
 	);
-}
+};
