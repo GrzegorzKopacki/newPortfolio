@@ -1,0 +1,20 @@
+import styles from "./Hero.module.css";
+import KOPACKI from "../../../assets/hero/gk.png";
+
+export function Hero() {
+	return (
+		<section>
+			<div>
+				<h1>Hi. Im Grzegorz</h1>
+				<p>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem ut
+					ipsam quis deserunt voluptates eveniet.
+				</p>
+				<a href="mailto:gkopacki11@gmail.com">Contac me</a>
+			</div>
+			<img src={KOPACKI} alt="" className={styles.heroImg} />
+			<div className={styles.topBlur}></div>
+			<div className={styles.bottomBlur}></div>
+		</section>
+	);
+}
