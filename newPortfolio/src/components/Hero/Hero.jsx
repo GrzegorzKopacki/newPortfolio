@@ -3,15 +3,15 @@ import KOPACKI from "../../../assets/hero/heroImage.png";
 
 export function Hero() {
 	return (
-		<section>
-			<div className={styles.container}>
-				<h1 className={styles.title}>Hi. Im Grzegorz</h1>
+		<section className={styles.container}>
+			<div className={styles.content}>
+				<h1 className={styles.title}>Hi, I'm Grzegorz</h1>
 				<p className={styles.description}>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem ut
-					ipsam quis deserunt voluptates eveniet.
+					I'm a full-stack developer with 5 years of experience using React and
+					NodeJS. Reach out if you'd like to learn more!
 				</p>
-				<a href="mailto:gkopacki11@gmail.com" className={styles.contactBtn}>
-					Contac me
+				<a href="mailto:myemail@email.com" className={styles.contactBtn}>
+					Contact Me
 				</a>
 			</div>
 			<img src={KOPACKI} alt="" className={styles.heroImg} />
