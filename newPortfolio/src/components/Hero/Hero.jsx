@@ -1,5 +1,5 @@
 import styles from "./Hero.module.css";
-import KOPACKI from "../../../assets/hero/gk.png";
+import KOPACKI from "../../../assets/hero/heroImage.png";
 
 export function Hero() {
 	return (
@@ -20,3 +20,5 @@ export function Hero() {
 		</section>
 	);
 }
+
+// 38:49
