@@ -1,6 +1,5 @@
 import styles from "./Skills.module.css";
-import {SKILLS} from "../../data/skills"
-
+import { SKILLS } from "../../data/skills";
 
 export function Skills() {
 	return (
@@ -11,7 +10,8 @@ export function Skills() {
 					{SKILLS.map((skill, id) => {
 						return (
 							<div key={id}>
-								<img src={skill.image} alt="" />
+								<img src={skill.image} alt="skills image" />
+								<p>{skill.title}</p>
 							</div>
 						);
 					})}
