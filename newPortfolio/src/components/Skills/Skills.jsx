@@ -5,24 +5,26 @@ import { COMPETENCES } from "../../data/competences";
 export function Skills() {
 	return (
 		<section id="experience" className={styles.container}>
-			<h2>Skills</h2>
-			<div>
-				<div>
+			<h2 className={styles.title}>Skills</h2>
+			<div className={styles.content}>
+				<div className={styles.skills}>
 					{SKILLS.map((skill, id) => {
 						return (
-							<div key={id}>
-								<img src={skill.image} alt="skills image" />
-								<p>{skill.title}</p>
+							<div className={styles.skill} key={id}>
+								<div className={styles.skillImageContainer}>
+									<img src={skill.image} alt="skills image" />
+								</div>
+									<p>{skill.title}</p>
 							</div>
 						);
 					})}
 				</div>
-				<ul>
+				<ul className={styles.competences}>
 					{COMPETENCES.map((compItem, id) => {
 						return (
-							<li key={id}>
+							<li key={id} className={styles.competencesItem}>
 								<img src={compItem.image} alt="competences image" />
-								<div>
+								<div className={styles.competencesItemDetails}>
 									<h3>{`${compItem.role}, ${compItem.organisation}`}</h3>
 									<p>{`${compItem.startDate}, ${compItem.endDate}`}</p>
 									<ul>
