@@ -1,5 +1,6 @@
 import styles from "./Skills.module.css";
 import { SKILLS } from "../../data/skills";
+import { COMPETENCES } from "../../data/competences";
 
 export function Skills() {
 	return (
@@ -16,7 +17,15 @@ export function Skills() {
 						);
 					})}
 				</div>
-				<ul></ul>
+				<ul>
+					{COMPETENCES.map((compItem, id) => {
+						return (
+							<li key={id}>
+								<img src={compItem.image} alt="competences image" />
+							</li>
+						);
+					})}
+				</ul>
 			</div>
 		</section>
 	);
