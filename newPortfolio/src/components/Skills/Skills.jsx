@@ -22,6 +22,15 @@ export function Skills() {
 						return (
 							<li key={id}>
 								<img src={compItem.image} alt="competences image" />
+								<div>
+									<h3>{`${compItem.role}, ${compItem.organisation}`}</h3>
+									<p>{`${compItem.startDate}, ${compItem.endDate}`}</p>
+									<ul>
+										{compItem.experiences.map((exp, id) => {
+											return <li key={id}>{exp}</li>;
+										})}
+									</ul>
+								</div>
 							</li>
 						);
 					})}
